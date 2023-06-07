@@ -2,11 +2,10 @@
 """
 Created on Wed May 31 17:33:19 2023
 
-@author: Spirelab
+@author: Shaique
 """
 
-import pandas as pd
-import numpy
+
 import os
 import shutil
  
@@ -14,7 +13,7 @@ control_dir = "C:/Users/Spirelab/Desktop/mfcc_correlation/mfcc_data_set/controls
 
 control_mfcc_dir = "C:/Users/Spirelab/Desktop/mfcc_correlation/mfcc_data_set/control_mfcc"
 
-os.chdir(control_dir)
+os.chdir(control_mfcc_dir)
 
 subjects = os.listdir(control_dir)
 
@@ -35,5 +34,7 @@ for i in subjects:
         csv_file_dir = os.path.join(subject_dir, j)
         
         shutil.copy(csv_file_dir, sub_dir)
+        
+        
     
     
